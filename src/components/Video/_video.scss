@@ -1,0 +1,52 @@
+@import "../../base";
+
+.videos {
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #fff;
+  cursor: pointer;
+  &_Top {
+    margin: 0.4rem;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    div {
+      position: absolute;
+      right: 0.3rem;
+      bottom: 0.3rem;
+      background: #000;
+      border-radius: 3px;
+      padding: 0.2rem;
+    }
+  }
+
+  &_title {
+    margin-bottom: 0.1rem;
+    @include line-clamp(1)
+  }
+
+  &_details {
+    align-items: center;
+    display: flex;
+  }
+
+  &_Channel {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 0.3rem;
+      cursor: pointer;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+}

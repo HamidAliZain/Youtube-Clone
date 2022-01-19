@@ -1,0 +1,55 @@
+@import "../../base";
+.slidebar {
+  width: 250px;
+  display: flex;
+  background: $black-primary;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 2rem;
+  margin: auto 0px;
+  transition: transform.2s ease-in;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.5rem;
+    margin: 0.2rem 0;
+    cursor: pointer;
+
+    span {
+      margin-left: 1rem;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+    &:hover {
+      background-color: $border;
+    }
+  }
+  hr {
+    background-color: $border;
+  }
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: $break-medium) {
+  .slidebar {
+    width: 90px;
+  }
+  li {
+    justify-content: center;
+  }
+  span {
+    display: none;
+  }
+}
+
+@media (max-width: $break-small) {
+  .slidebar {
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 999;
+  }
+}
