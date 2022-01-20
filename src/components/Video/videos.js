@@ -5,7 +5,7 @@ export const Video = () => {
   return (
     <div className="videos">
       <div className="videos_Top">
-        <img src="https://i.ytimg.com/vi/y1wS38w5RpA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB302hHp2u8XY_HbgOFB_jqjCjBlg" />
+        <img alt="s" src="https://i.ytimg.com/vi/y1wS38w5RpA/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB302hHp2u8XY_HbgOFB_jqjCjBlg" />
         <div >05.00</div>
       </div>
       <div className="videos_title">Spider-Man  in Danger</div>
