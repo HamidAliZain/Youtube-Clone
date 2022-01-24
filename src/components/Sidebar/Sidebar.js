@@ -7,13 +7,25 @@ import {
   MdSubscriptions,
   MdThumbUp,
 } from "react-icons/md";
-import"./_sidebar.scss"
+import { useDispatch } from "react-redux";
+import { log_out } from "../../redux/actions/auth.action";
+import "./_sidebar.scss";
+
+export const Sidebar = ({ menu, handlemenu }) => {
+  
+  
+  
+  const dispatch = useDispatch();
+  const logOut_Handler = () =>{
+dispatch(log_out())
+
+  }
 
 
-export const Sidebar = ({menu ,handlemenu}) => {
   return (
-    <nav className={menu ? "slidebar open" :"slidebar"}
-    onClick={ () =>  handlemenu(false)  }
+    <nav
+      className={menu ? "slidebar open" : "slidebar"}
+      onClick={() => handlemenu(false)}
     >
       <li>
         <MdHome size={23} />
@@ -30,8 +42,6 @@ export const Sidebar = ({menu ,handlemenu}) => {
         <span>Liked Videos</span>
       </li>
 
-      
-
       <li>
         <MdHistory size={23} />
         <span>History</span>
@@ -47,11 +57,11 @@ export const Sidebar = ({menu ,handlemenu}) => {
         <span>I dont Know</span>
       </li>
 
-      <li>
+      <li onClick={logOut_Handler  }>
         <MdExitToApp size={23} />
         <span>Logout</span>
       </li>
-      <hr/>
+      <hr />
     </nav>
   );
 };

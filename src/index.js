@@ -6,11 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./_base.scss";
 import { Provider } from "react-redux";
-import store from "./redux/store"
-
+import store from "./redux/store";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { LoginScreen } from "./Display/loginscreen/login";
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="login" element={<LoginScreen />} />
+      </Routes>
+    </BrowserRouter>
   </Provider>,
   document.getElementById("root")
 );
